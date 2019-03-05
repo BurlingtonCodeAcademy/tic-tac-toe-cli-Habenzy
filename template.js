@@ -30,28 +30,14 @@ function toggle() {
 }
 
 function checkWin() {
-  if (squares[0] === player && squares[1] === player && squares[2] === player) {
-    return true
-  }
-  else if (squares[3] === player && squares[4] === player && squares[5] === player) {
-    return true
-  }
-  else if (squares[6] === player && squares[7] === player && squares[8] === player) {
-    return true
-  }
-  else if (squares[0] === player && squares[3] === player && squares[6] === player) {
-    return true
-  }
-  else if (squares[1] === player && squares[4] === player && squares[7] === player) {
-    return true
-  }
-  else if (squares[2] === player && squares[5] === player && squares[8] === player) {
-    return true
-  }
-  else if (squares[0] === player && squares[4] === player && squares[8] === player) {
-    return true
-  }
-  else if (squares[2] === player && squares[4] === player && squares[6] === player) {
+  if ((squares[0] === player && squares[1] === player && squares[2] === player) ||
+  (squares[3] === player && squares[4] === player && squares[5] === player)||
+  (squares[6] === player && squares[7] === player && squares[8] === player)||
+  (squares[0] === player && squares[3] === player && squares[6] === player)||
+  (squares[1] === player && squares[4] === player && squares[7] === player)||
+  (squares[2] === player && squares[5] === player && squares[8] === player)||
+  (squares[0] === player && squares[4] === player && squares[8] === player)||
+  (squares[2] === player && squares[4] === player && squares[6] === player)) {
     return true
   }
   else {return false}
