@@ -67,9 +67,9 @@ async function play() {
   }
   else {
     squares[(parseInt(move) - 1)] = player;
-    let didWin = checkWin();
-    if (didWin) {
-      console.log(`Player ${player} wins!!!`);
+    if (checkWin()) {
+
+      console.log(board + `\nPlayer ${player} wins!!!`);
       process.exit()
     }
     toggle();
@@ -77,4 +77,4 @@ async function play() {
   }
 }
 
-setUp()
+setUp();
