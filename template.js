@@ -37,11 +37,7 @@ function checkWin() {
       counter += 1
     }
   }
-  if (counter === 9) {
-    console.log('This game belongs to the cat...');
-    process.exit();
-  }
-  else if ((squares[0] === player && squares[1] === player && squares[2] === player) ||
+  if ((squares[0] === player && squares[1] === player && squares[2] === player) ||
   (squares[3] === player && squares[4] === player && squares[5] === player)||
   (squares[6] === player && squares[7] === player && squares[8] === player)||
   (squares[0] === player && squares[3] === player && squares[6] === player)||
@@ -50,6 +46,10 @@ function checkWin() {
   (squares[0] === player && squares[4] === player && squares[8] === player)||
   (squares[2] === player && squares[4] === player && squares[6] === player)) {
     return true
+  }
+  else if (counter === 9) {
+    console.log('This game belongs to the cat...');
+    process.exit();
   }
   else {return false}
 }
