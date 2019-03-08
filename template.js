@@ -30,7 +30,18 @@ function toggle() {
 }
 
 function checkWin() {
-  if ((squares[0] === player && squares[1] === player && squares[2] === player) ||
+  let counter = 0
+
+  for (let square of squares) {
+    if (square === 'X' || square === 'O') {
+      counter += 1
+    }
+  }
+  if (counter === 9) {
+    console.log('This game belongs to the cat...');
+    process.exit();
+  }
+  else if ((squares[0] === player && squares[1] === player && squares[2] === player) ||
   (squares[3] === player && squares[4] === player && squares[5] === player)||
   (squares[6] === player && squares[7] === player && squares[8] === player)||
   (squares[0] === player && squares[3] === player && squares[6] === player)||
